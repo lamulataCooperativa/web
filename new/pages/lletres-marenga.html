@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script>
+    var name = "";
+</script>
+
+<head>
+  <meta charset="utf-8">
+  <title>Imperial Boootstrap Template</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+  <link href="favicon.ico" rel="shortcut icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate-css/animate.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: Imperial
+    Theme URL: https://bootstrapmade.com/imperial-free-onepage-bootstrap-theme/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+    <!--==========================
+    Header Section
+    ============================-->
+    <header id="header">
+        <div class="container">
+    
+          <div id="logo" class="pull-left">
+            <a href="../index.html#hero"><img src="../img/logo.png" alt="" title="" /></img></a>
+            <!-- Uncomment below if you prefer to use a text image -->
+            <!--<h1><a href="#hero">Header 1</a></h1>-->
+          </div>
+    
+          <nav id="nav-menu-container">
+            <ul class="nav-menu">
+              <li class="menu-active"><a href="../index.html#hero">Inici</a></li>
+              <li><a href="../index.html#nouCD">Tròpic del Mediterrani</a></li>
+              <li><a href="../index.html#about">Qui som</a></li>
+              <li><a href="../index.html#concerts">Concerts</a></li>
+              <li><a href="../index.html#lletres">Lletres</a>
+                <ul>
+                  <li><a href="lletres-tropic.html">Tròpic del Mediterrani</a></li>
+                  <li><a href="lletres-marenga.html">Marenga</a></li>
+                </ul>
+              </li>
+              <li><a href="../index.html#team">Membres</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </nav>
+          <!-- #nav-menu-container -->
+        </div>
+      </header>
+      <!-- #header -->
+
+        <section id="pagina_lletres">
+            <div class="container wow fadeInUp">
+                <div class="row">
+                <h3 class="pagina_lletres-title">Marenga</h3>
+                <div class="section-title-divider"></div>
+                <!-- <p class="pagina_lletres-text">"Lorem ipsum dolor sit amet romeno pires mu meratrix"</p> -->
+
+                <script>
+                    function desplegarLletra(tema) {
+                        
+                        if(name != "" && name != tema)
+                        {
+                            document.getElementById(name).style.cssText = 'display:none;';
+                            document.getElementById(name+'video').style.cssText = 'display:none;';
+                        }
+                        
+                        var disp = document.getElementById(tema).style.display;
+                        if(disp == 'block') {
+                            document.getElementById(tema).style.cssText = 'display:none;';
+                            document.getElementById(tema+'video').style.cssText = 'display:none;';
+                        }
+                        else {
+                            document.getElementById(tema).style.cssText = 'display:block;';
+                            document.getElementById(tema+'video').style.cssText = 'display:block;';
+                            name = tema;
+                        }
+                        
+                    }
+                </script>
+
+        
+                <table width="60%">
+                    <tr>
+                        <td>
+                            <h2 id="festa" class="nom">Trempera de festa major</h2>
+                        </td>
+                        <td>
+                            <p class="disc">Marenga</p>
+                        </td>
+                        <td>
+                            <a class="pagina_lletres-btn" onclick="desplegarLletra('trempera')" href="#festa">Veure</a>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td colspan="3">
+                            <iframe id="tremperavideo" width="280" height="157" src="https://www.youtube.com/embed/JJCABZ_EPBY" 
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <object id="trempera" data="../pdf/trempera.pdf" type="application/pdf" width="100%" height="800px" >
+                            </object>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <h2 id="ou" class="nom">Bati l'ou</h2>
+                        </td>
+                        <td>
+                            <p class="disc">Marenga</p>
+                        </td>
+                        <td>
+                            <a class="pagina_lletres-btn" onclick="desplegarLletra('bati')" href="#ou">Veure</a>
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td colspan="3">
+                            <iframe id="bativideo" width="560" height="365" src="https://www.youtube.com/embed/hgs2id6O-8M" 
+                            frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <object id="bati" data="../pdf/bati.pdf#zoom=100" type="application/pdf" width="100%" height="800px" >
+                            </object>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <h2 id="oren" class="nom">Oreneta</h2>
+                        </td>
+                        <td>
+                            <p class="disc">Marenga</p>
+                        </td>
+                        <td>
+                            <a class="pagina_lletres-btn" href="#oren" onclick="desplegarLletra('oreneta')">Veure</a>
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td colspan="3">
+                            <iframe id="orenetavideo" width="280" height="157" src="https://www.youtube.com/embed/kcUZRXkaA7M" 
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <object id="oreneta" data="../pdf/oreneta.pdf#zoom=90" type="application/pdf" width="100%" height="800px" >
+                            </object>
+                        </td>
+                    </tr>
+        
+                    <tr>
+                        <td>
+                            <h2 id="per" class="nom">Però</h2>
+                        </td>
+                        <td>
+                            <p class="disc">Marenga</p>
+                        </td>
+                        <td>
+                            <a class="pagina_lletres-btn" href="#per" onclick="desplegarLletra('pero')">Veure</a>
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td colspan="3">
+                            <iframe id="perovideo" width="560" height="365" src="https://www.youtube.com/embed/2D6RRcPa6Rc" 
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <object id="pero" data="../pdf/pero.pdf#zoom=100" type="application/pdf" width="100%" height="800px" >
+                            </object>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h2 id="mulata" class="nom">Salsa de Mulata</h2>
+                        </td>
+                        <td>
+                            <p class="disc">Marenga</p>
+                        </td>
+                        <td>
+                            <a class="pagina_lletres-btn" href="#mulata" onclick="desplegarLletra('salsa')">Veure</a>
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td colspan="3">
+                            <iframe id="salsavideo" width="280" height="157" src="https://www.youtube.com/embed/JdXOAmQafC8"
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <object id="salsa" data="../pdf/salsa.pdf#zoom=100" type="application/pdf" width="100%" height="800px" >
+                            </object>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <h2 id="tant" class="nom">Oh i tant</h2>
+                        </td>
+                        <td>
+                            <p class="disc">Marenga</p>
+                        </td>
+                        <td>
+                            <a class="pagina_lletres-btn" href="#tant" onclick="desplegarLletra('ohitant')">Veure</a>
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td colspan="3">
+                            <iframe id="ohitantvideo" width="280" height="157" src="https://www.youtube.com/embed/qGBnhcJ-n9M" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <object id="ohitant" data="../pdf/ohitant.pdf#zoom=90" type="application/pdf" width="100%" height="800px" >
+                            </object>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h2 id="dins" class="nom">Per dins</h2>
+                        </td>
+                        <td>
+                            <p class="disc">Marenga</p>
+                        </td>
+                        <td>
+                            <a class="pagina_lletres-btn" href="#dins" onclick="desplegarLletra('perdins')">Veure</a>
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td colspan="3">
+                            <iframe id="perdinsvideo" width="280" height="157" src="https://www.youtube.com/embed/yxq0sr5c_gE" 
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <object id="perdins" data="../pdf/perdins.pdf#zoom=100" type="application/pdf" width="100%" height="800px" >
+                            </object>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h2 id="sn" class="nom">Ciutat sense nom</h2>
+                        </td>
+                        <td>
+                            <p class="disc">Marenga</p>
+                        </td>
+                        <td>
+                            <a class="pagina_lletres-btn" href="#sn" onclick="desplegarLletra('ciutat')">Veure</a>
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td colspan="3">
+                            <iframe id="ciutatvideo" width="560" height="365" src="https://www.youtube.com/embed/VSViM6m_xPI" 
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <object id="ciutat" data="../pdf/ciutat.pdf#zoom=90" type="application/pdf" width="100%" height="800px" >
+                            </object>
+                        </td>
+                    </tr> 
+
+                    <tr>
+                        <td>
+                            <h2 id="nostra" class="nom">Vinya nostra</h2>
+                        </td>
+                        <td>
+                            <p class="disc">Marenga</p>
+                        </td>
+                        <td>
+                            <a class="pagina_lletres-btn" href="#nostra" onclick="desplegarLletra('vinya')">Veure</a>
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td colspan="3">
+                            <iframe id="vinyavideo" width="280" height="157" src="https://www.youtube.com/embed/f-cvP-acR4s" 
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <object id="vinya" data="../pdf/vinya.pdf#zoom=100" type="application/pdf" width="100%" height="800px" >
+                            </object>
+                        </td>
+                    </tr> 
+
+                    <tr>
+                        <td>
+                            <h2 id="irrell" class="nom">Irrellevant</h2>
+                        </td>
+                        <td>
+                            <p class="disc">Marenga</p>
+                        </td>
+                        <td>
+                            <a class="pagina_lletres-btn" href="#irrell" onclick="desplegarLletra('irrellevant')">Veure</a>
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td colspan="3">
+                            <iframe id="irrellevantvideo" width="280" height="157" src="https://www.youtube.com/embed/NSlEaK8BB_w" frameborder="0" 
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <object id="irrellevant" data="../pdf/irrellevant.pdf#zoom=100" type="application/pdf" width="100%" height="800px" >
+                            </object>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h2 id="caput" class="nom">Caputxeta</h2>
+                        </td>
+                        <td>
+                            <p class="disc">Marenga</p>
+                        </td>
+                        <td>
+                            <a class="pagina_lletres-btn" href="#caput" onclick="desplegarLletra('caputxeta')">Veure</a>
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td colspan="3">
+                            <iframe id="caputxetavideo" width="280" height="157" src="https://www.youtube.com/embed/KGm4x6nmlEc" 
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <object id="caputxeta" data="../pdf/caputxeta.pdf#zoom=100" type="application/pdf" width="100%" height="800px" >
+                            </object>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h2 id="ultim" class="nom">Ultimàtum</h2>
+                        </td>
+                        <td>
+                            <p class="disc">Marenga</p>
+                        </td>
+                        <td>
+                            <a class="pagina_lletres-btn" href="#ultim" onclick="desplegarLletra('ultimatum')">Veure</a>
+                        </td>
+                    </tr>  
+                    <tr>
+                        <td colspan="3">
+                            <iframe id="ultimatumvideo" width="280" height="157" src="https://www.youtube.com/embed/fQwRyaJqY6c" 
+                                frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <object id="ultimatum" data="../pdf/ultimatum.pdf#zoom=100" type="application/pdf" width="100%" height="800px" >
+                            </object>
+                        </td>
+                    </tr>
+                </table>
+        
+            </div>
+        </section>
+
+    <!--==========================
+    Footer
+    ============================-->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copyright">
+                        &copy; Copyright <strong>Imperial Theme</strong>. All Rights Reserved
+                    </div>
+                    <div class="credits">
+                        <!--
+                            All the links in the footer should remain intact.
+                            You can delete the links only if you purchased the pro version.
+                            Licensing information: https://bootstrapmade.com/license/
+                            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Imperial
+                        -->
+                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+      <!-- #footer -->
+    
+      <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    
+      <!-- Required JavaScript Libraries -->
+      <script src="lib/jquery/jquery.min.js"></script>
+      <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+      <script src="lib/superfish/hoverIntent.js"></script>
+      <script src="lib/superfish/superfish.min.js"></script>
+      <script src="lib/morphext/morphext.min.js"></script>
+      <script src="lib/wow/wow.min.js"></script>
+      <script src="lib/stickyjs/sticky.js"></script>
+      <script src="lib/easing/easing.js"></script>
+    
+      <!-- Template Specisifc Custom Javascript File -->
+      <script src="js/custom.js"></script>
+    
+      <script src="contactform/contactform.js"></script>
+    
+    
+    </body>
+</html>
+    

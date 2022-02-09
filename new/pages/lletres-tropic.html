@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Imperial Boootstrap Template</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+  <meta property="og:title" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="">
+
+  <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+
+  <!-- Place your favicon.ico and apple-touch-icon.png in the template root directory -->
+  <link href="favicon.ico" rel="shortcut icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate-css/animate.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="../css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: Imperial
+    Theme URL: https://bootstrapmade.com/imperial-free-onepage-bootstrap-theme/
+    Author: BootstrapMade.com
+    Author URL: https://bootstrapmade.com
+  ======================================================= -->
+</head>
+
+<body>
+
+    <!--==========================
+    Header Section
+    ============================-->
+    <header id="header">
+        <div class="container">
+    
+          <div id="logo" class="pull-left">
+            <a href="../index.html#hero"><img src="../img/logo.png" alt="" title="" /></img></a>
+            <!-- Uncomment below if you prefer to use a text image -->
+            <!--<h1><a href="#hero">Header 1</a></h1>-->
+          </div>
+    
+          <nav id="nav-menu-container">
+            <ul class="nav-menu">
+              <li class="menu-active"><a href="../index.html#hero">Inici</a></li>
+              <li><a href="../index.html#nouCD">Tròpic del Mediterrani</a></li>
+              <li><a href="../index.html#about">Qui som</a></li>
+              <li><a href="../index.html#concerts">Concerts</a></li>
+              <li><a href="../index.html#lletres">Lletres</a>
+                <ul>
+                  <li><a href="lletres-tropic.html">Tròpic del Mediterrani</a></li>
+                  <li><a href="lletres-marenga.html">Marenga</a></li>
+                </ul>
+              </li>
+              <li><a href="../index.html#team">Membres</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </nav>
+          <!-- #nav-menu-container -->
+        </div>
+      </header>
+      <!-- #header -->
+
+        <section id="pagina_lletres">
+            <div class="container wow fadeInUp">
+                <div class="row">
+                <h3 class="pagina_lletres-title">Tròpic del Mediterrani</h3>
+                <div class="section-title-divider"></div>
+                <!-- <p class="pagina_lletres-text">"Lorem ipsum dolor sit amet empora tumines po restum quantum"</p> -->
+
+                <script>
+                    function desplegarLletra(tema) {
+                        
+                        if(name != "" && name != tema)
+                        {
+                            document.getElementById(name).style.cssText = 'display:none;';
+                            document.getElementById(name+'video').style.cssText = 'display:none;';
+                        }
+                        
+                        var disp = document.getElementById(tema).style.display;
+                        if(disp == 'block') {
+                            document.getElementById(tema).style.cssText = 'display:none;';
+                            document.getElementById(tema+'video').style.cssText = 'display:none;';
+                        }
+                        else {
+                            document.getElementById(tema).style.cssText = 'display:block;';
+                            document.getElementById(tema+'video').style.cssText = 'display:block;';
+                            name = tema;
+                        }
+                    }
+                </script>
+        
+                <table width="60%">
+                    <tr>
+                        <td>
+                            <h2 id="raga" class="nom">Ragató</h2>
+                        </td>
+                        <td>
+                            <p class="disc">Tròpic del Mediterrani</p>
+                        </td>
+                        <td>
+                            <a class="pagina_lletres-btn" onclick="desplegarLletra('ragato')" href="#raga">Veure</a>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td colspan="3">
+                            <iframe id="ragatovideo" width="560" height="315" src="https://www.youtube.com/embed/36vXG6PX3dw" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <object id="ragato" data="../pdf/ragato.pdf" type="application/pdf" width="100%" height="800px" >
+                            </object>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <h2 id="samba" class="nom">Sambanimal</h2>
+                        </td>
+                        <td>
+                            <p class="disc">Tròpic del Mediterrani</p>
+                        </td>
+                        <td>
+                            <a class="pagina_lletres-btn" onclick="desplegarLletra('sambanimal')" href="#samba">Veure</a>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td colspan="3">
+                            <iframe id="sambanimalvideo" width="560" height="315" src="https://www.youtube.com/embed/1ZndLeUsytQ" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <object id="sambanimal" data="../pdf/sambanimal.pdf" type="application/pdf" width="100%" height="800px" >
+                            </object>
+                        </td>
+                    </tr>  
+        
+                    <tr>
+                        <td>
+                            <h2 id="maria" class="nom">Maria Pita</h2>
+                        </td>
+                        <td>
+                            <p class="disc">Tròpic del Mediterrani</p>
+                        </td>
+                        <td>
+                            <a class="pagina_lletres-btn" onclick="desplegarLletra('mariapita')" href="#maria">Veure</a>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td colspan="3">
+                            <iframe id="mariapitavideo" width="560" height="315" src="https://www.youtube.com/embed/LxYy3fB-lv0" frameborder="0" 
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <object id="mariapita" data="../pdf/maria.pdf" type="application/pdf" width="100%" height="800px" >
+                            </object>
+                        </td>
+                    </tr> 
+    
+                    <tr>
+                        <td>
+                            <h2 id="porc" class="nom">El nom del porc</h2>
+                        </td>
+                        <td>
+                            <p class="disc">Tròpic del Mediterrani</p>
+                        </td>
+                        <td>
+                            <a class="pagina_lletres-btn" onclick="desplegarLletra('nom')" href="#porc">Veure</a>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td colspan="3">
+                            <iframe id="nomvideo" width="560" height="315" src="https://www.youtube.com/embed/Tckh7NTnT1A" frameborder="0" 
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <object id="nom" data="../pdf/porc.pdf" type="application/pdf" width="100%" height="800px" >
+                            </object>
+                        </td>
+                    </tr>   
+
+                    <tr>
+                        <td>
+                            <h2 id="dopa" class="nom">Dopamine</h2>
+                        </td>
+                        <td>
+                            <p class="disc">Tròpic del Mediterrani</p>
+                        </td>
+                        <td>
+                            <a class="pagina_lletres-btn" onclick="desplegarLletra('dopamine')" href="#dopa">Veure</a>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td colspan="3">
+                            <iframe id="dopaminevideo" width="560" height="315" src="https://www.youtube.com/embed/605_Mb-pFW0" frameborder="0" 
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <object id="dopamine" data="../pdf/dopamine.pdf" type="application/pdf" width="100%" height="800px" >
+                            </object>
+                        </td>
+                    </tr>  
+
+
+                    <tr>
+                        <td>
+                            <h2 id="saps" class="nom">I tu no saps</h2>
+                        </td>
+                        <td>
+                            <p class="disc">Tròpic del Mediterrani</p>
+                        </td>
+                        <td>
+                            <a class="pagina_lletres-btn" onclick="desplegarLletra('treballar')" href="#saps">Veure</a>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td colspan="3">
+                            <iframe id="treballarvideo" width="560" height="315" src="https://www.youtube.com/embed/ceAME-ONgWM" frameborder="0" 
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <object id="treballar" data="../pdf/treballar.pdf" type="application/pdf" width="100%" height="800px" >
+                            </object>
+                        </td>
+                    </tr>  
+
+                    <tr>
+                        <td>
+                            <h2 id="ib" class="nom">Ibex 35</h2>
+                        </td>
+                        <td>
+                            <p class="disc">Tròpic del Mediterrani</p>
+                        </td>
+                        <td>
+                            <a class="pagina_lletres-btn" onclick="desplegarLletra('ibex')" href="#ib">Veure</a>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td colspan="3">
+                            <iframe id="ibexvideo" width="560" height="315" src="https://www.youtube.com/embed/x3pEfMOs7O0" frameborder="0" 
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <object id="ibex" data="../pdf/ibex.pdf" type="application/pdf" width="100%" height="800px" >
+                            </object>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h2 id="increduls" class="nom">Ulls incrèduls</h2>
+                        </td>
+                        <td>
+                            <p class="disc">Tròpic del Mediterrani</p>
+                        </td>
+                        <td>
+                            <a class="pagina_lletres-btn" onclick="desplegarLletra('ulls')" href="#increduls">Veure</a>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td colspan="3">
+                            <iframe id="ullsvideo" width="560" height="315" src="https://www.youtube.com/embed/VQBvPYzyu30" frameborder="0" 
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <object id="ulls" data="../pdf/ulls.pdf" type="application/pdf" width="100%" height="800px" >
+                            </object>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h2 id="bol" class="nom">Caçadors de bolets</h2>
+                        </td>
+                        <td>
+                            <p class="disc">Tròpic del Mediterrani</p>
+                        </td>
+                        <td>
+                            <a class="pagina_lletres-btn" onclick="desplegarLletra('bolets')" href="#bol">Veure</a>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td colspan="3">
+                            <iframe id="boletsvideo" width="560" height="315" src="https://www.youtube.com/embed/X6q_4unKL-k" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <object id="bolets" data="../pdf/bolets.pdf" type="application/pdf" width="100%" height="800px" >
+                            </object>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h2 id="posa" class="nom">Posa'm cremeta</h2>
+                        </td>
+                        <td>
+                            <p class="disc">Tròpic del Mediterrani</p>
+                        </td>
+                        <td>
+                            <a class="pagina_lletres-btn" onclick="desplegarLletra('cremeta')" href="#posa">Veure</a>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td colspan="3">
+                            <iframe id="cremetavideo" width="560" height="315" src="https://www.youtube.com/embed/C-hYYweY6BI" frameborder="0" 
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <object id="cremeta" data="../pdf/cremeta.pdf" type="application/pdf" width="100%" height="800px" >
+                            </object>
+                        </td>
+                    </tr> 
+
+                    <tr>
+                        <td>
+                            <h2 id="um" class="nom">Umami</h2>
+                        </td>
+                        <td>
+                            <p class="disc">Tròpic del Mediterrani</p>
+                        </td>
+                        <td>
+                            <a class="pagina_lletres-btn" onclick="desplegarLletra('umami')" href="#um">Veure</a>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td colspan="3">
+                            <iframe id="umamivideo" width="560" height="315" src="https://www.youtube.com/embed/rRaCuiIKKQg" frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <object id="umami" data="../pdf/umami.pdf" type="application/pdf" width="100%" height="800px" >
+                            </object>
+                        </td>
+                    </tr> 
+
+                    <tr>
+                        <td>
+                            <h2 id="enrica" class="nom">Enriqueta</h2>
+                        </td>
+                        <td>
+                            <p class="disc">Tròpic del Mediterrani</p>
+                        </td>
+                        <td>
+                            <a class="pagina_lletres-btn" onclick="desplegarLletra('enriqueta')" href="#enrica">Veure</a>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td colspan="3">
+                            <iframe id="enriquetavideo" width="560" height="315" src="https://www.youtube.com/embed/7LQsdStOoCA" frameborder="0" 
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <object id="enriqueta" data="../pdf/enriqueta.pdf" type="application/pdf" width="100%" height="800px" >
+                            </object>
+                        </td>
+                    </tr>
+                </table>
+        
+            </div>
+        </section>
+
+    <!--==========================
+    Footer
+    ============================-->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copyright">
+                        &copy; Copyright <strong>Imperial Theme</strong>. All Rights Reserved
+                    </div>
+                    <div class="credits">
+                        <!--
+                            All the links in the footer should remain intact.
+                            You can delete the links only if you purchased the pro version.
+                            Licensing information: https://bootstrapmade.com/license/
+                            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Imperial
+                        -->
+                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+      <!-- #footer -->
+    
+      <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    
+      <!-- Required JavaScript Libraries -->
+      <script src="lib/jquery/jquery.min.js"></script>
+      <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+      <script src="lib/superfish/hoverIntent.js"></script>
+      <script src="lib/superfish/superfish.min.js"></script>
+      <script src="lib/morphext/morphext.min.js"></script>
+      <script src="lib/wow/wow.min.js"></script>
+      <script src="lib/stickyjs/sticky.js"></script>
+      <script src="lib/easing/easing.js"></script>
+    
+      <!-- Template Specisifc Custom Javascript File -->
+      <script src="js/custom.js"></script>
+    
+      <script src="contactform/contactform.js"></script>
+    
+    
+    </body>
+</html>
+    
