@@ -491,9 +491,20 @@ body.mobile-nav-active #mobile-nav-toggle {
 #newSingle {
   background: #fff;
   padding: 20px 0;
-
-  }
 }
+
+#newSingle iframe {
+	max-width: 100%;
+	
+}
+
+@media screen and (max-width: 768px) {
+	#newSingle iframe {
+		min-height: 300px;
+		height: auto;
+	}
+}
+
 
 #newSingle .nouCD-img {
   overflow: hidden;
