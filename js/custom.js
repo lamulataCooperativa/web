@@ -1,5 +1,69 @@
 jQuery(document).ready(function( $ ) {
 
+    var controller = new ScrollMagic.Controller();
+
+    /* Scroll Magic - scene Portada */
+
+    /* var tweenPortadaLogo = TweenMax.to(".hero-logo img", 1, { opacity: '0' });
+    var tweenPortadaText = TweenMax.to(".rotating", 1, { opacity: '0' });
+    
+
+    new ScrollMagic.Scene({ triggerElement: ".hero-logo", duration: window.innerHeight/4, triggerHook: 0, offset: -200})
+        .setTween(tweenPortadaLogo)
+        .addTo(controller)
+
+    new ScrollMagic.Scene({ triggerElement: ".hero-logo", duration: window.innerHeight/4, triggerHook: 0, offset: -200})
+        .setTween(tweenPortadaText)
+        .addTo(controller)
+ */
+    /* Scroll Magic - scene New Single */
+
+    var tweenNewSingleTitle = TweenMax.to("#newSingle .section-title", 1, { opacity: '1' });
+    var tweenNouCDLeft = TweenMax.to("#newSingle .nouCD-img", 1, { left: '0' });
+    var tweenNouCDRight = TweenMax.to("#newSingle .nouCD-content", 1, { left: '0' });
+
+    new ScrollMagic.Scene({ triggerElement: "#newSingle", duration: window.innerHeight, triggerHook: 1, offset: 100})
+        .setTween(tweenNewSingleTitle)
+        .addTo(controller)
+
+    new ScrollMagic.Scene({ triggerElement: "#newSingle", duration: window.innerHeight, triggerHook: 1, offset: -300})
+        .setTween(tweenNouCDLeft)
+        .addTo(controller)
+
+    new ScrollMagic.Scene({ triggerElement: "#newSingle", duration: window.innerHeight, triggerHook: 0, offset: -300})
+        .setClassToggle("#newSingle .nouCD-img > img", "img-complet")
+        .addTo(controller)
+
+    new ScrollMagic.Scene({ triggerElement: "#newSingle", duration: window.innerHeight, triggerHook: 1, offset: -300})
+        .setTween(tweenNouCDRight)
+        .addTo(controller)
+
+    /* Scroll Magic - scene Tròpic del Mediterrani */
+
+    var tweenNouCDTitle = TweenMax.to("#nouCD .section-title", 1, { opacity: '1' });
+    var tweenNouCDLeft = TweenMax.to("#nouCD .nouCD-img", 1, { left: '0' });
+    var tweenNouCDRight = TweenMax.to("#nouCD .nouCD-content", 1, { left: '0' });
+
+    new ScrollMagic.Scene({ triggerElement: "#nouCD", duration: window.innerHeight, triggerHook: 1, offset: 100})
+        .setTween(tweenNouCDTitle)
+        .addTo(controller)
+
+    new ScrollMagic.Scene({ triggerElement: "#nouCD", duration: window.innerHeight, triggerHook: 1, offset: -300})
+        .setTween(tweenNouCDLeft)
+        .addTo(controller)
+
+    new ScrollMagic.Scene({ triggerElement: "#nouCD", duration: window.innerHeight, triggerHook: 0, offset: -300})
+        .setClassToggle("#nouCD .nouCD-img > img", "img-complet")
+        .addTo(controller)
+
+    new ScrollMagic.Scene({ triggerElement: "#nouCD", duration: window.innerHeight, triggerHook: 1, offset: -300})
+        .setTween(tweenNouCDRight)
+        .addTo(controller)
+
+    /*FI Scroll Magic*/
+
+
+
   // Preloader
   $(window).on('load', function() {
     $('#preloader').delay(100).fadeOut('slow',function(){$(this).remove();});
@@ -13,7 +77,7 @@ jQuery(document).ready(function( $ ) {
   });
   
   // Initiate the wowjs
-  new WOW().init();
+  /* new WOW().init(); */
   
   // Initiate superfish on nav menu
   $('.nav-menu').superfish({
