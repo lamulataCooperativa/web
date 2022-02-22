@@ -786,13 +786,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 0;
 }
 
-/* Services Section
+/* Controversia Section
 --------------------------------*/
 #controversia {
   background: #fff
   background-size: cover;
-  padding: 20px 20px 60px;
+  padding: 20px 20px 0;
   text-align: justify;
+  margin: 50px 0 0 0;
 }
 
 #controversia .service-item {
