@@ -791,7 +791,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 #services {
   background: #fff
   background-size: cover;
-  padding: 20px 0 60px 0;
+  padding: 20px 20px 60px;
+  text-align: justify;
 }
 
 #services .service-item {
