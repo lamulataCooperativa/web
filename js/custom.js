@@ -2,65 +2,177 @@ jQuery(document).ready(function( $ ) {
 
     var controller = new ScrollMagic.Controller();
 
-    /* Scroll Magic - scene Portada */
+    if (!isMobileDevice() || window.innerWidth > 767) {
+        /* Scroll Magic - scene Portada */
 
-    /* var tweenPortadaLogo = TweenMax.to(".hero-logo img", 1, { opacity: '0' });
-    var tweenPortadaText = TweenMax.to(".rotating", 1, { opacity: '0' });
+        var tweenPortadaLogo = TweenMax.to(".hero-logo img", 1, { opacity: '0' });
+        var tweenPortadaText = TweenMax.to(".rotating", 1, { opacity: '0' });
+
+        new ScrollMagic.Scene({ triggerElement: ".hero-logo", duration: window.innerHeight/4, triggerHook: 0, offset: -200})
+            .setTween(tweenPortadaLogo)
+            .addTo(controller)
+
+        new ScrollMagic.Scene({ triggerElement: ".hero-logo", duration: window.innerHeight/4, triggerHook: 0, offset: -200})
+            .setTween(tweenPortadaText)
+            .addTo(controller)
+
+        /* Scroll Magic - scene New Single */
+
+        var tweenNewSingleTitle = TweenMax.to("#newSingle .section-title", 1, { opacity: '1' });
+        var tweenNouCDVideo = new TimelineMax()
+                .from("#newSingle .nouCD-content", 1.5, {scale: 0.4, opacity: 0})
+                .to("#newSingle .nouCD-content", 1.5, {scale: 1, opacity: 1, delay: 7});
+
+        new ScrollMagic.Scene({ triggerElement: "#newSingle", duration: window.innerHeight, triggerHook: 1, offset: 100})
+            .setTween(tweenNewSingleTitle)
+            .addTo(controller)
+
+        new ScrollMagic.Scene({ triggerElement: "#newSingle", duration: window.innerHeight, triggerHook: 1, offset: 500})
+            .setTween(tweenNouCDVideo)
+            .addTo(controller)
+
+        /* Scroll Magic - scene Qui som */
+
+        var tweenAboutText = TweenMax.to(".about-content", 1, { opacity: '1' });
+
+        new ScrollMagic.Scene({ triggerElement: "#about", duration: window.innerHeight/2, triggerHook: 1, offset: 300})
+            .setTween(tweenAboutText)
+            .addTo(controller)
+
+        new ScrollMagic.Scene({ triggerElement: "#about", duration: window.innerHeight, triggerHook: 1, offset:  -500})
+            .setClassToggle(".about-img", "zap")
+            .addTo(controller)
+
+        /* Scroll Magic - scene Maixat */
+
+        var tweenMaixatTitle = TweenMax.to(".section-title", 1, { opacity: '1' });
+        var tweenMaixatItem = TweenMax.to(".portfolio-item", 1, { opacity: '1', left: 0 });
+
+        new ScrollMagic.Scene({ triggerElement: "#maixat", duration: window.innerHeight/2, triggerHook: 1, offset: 300})
+            .setTween(tweenMaixatTitle)
+            .addTo(controller)
+
+        new ScrollMagic.Scene({ triggerElement: "#maixat", duration: window.innerHeight/2, triggerHook: 1, offset: 100})
+            .setTween(tweenMaixatItem)
+            .addTo(controller)
+
+        /* Scroll Magic - scene Lletres */
+
+        var tweenLletresItem = new TimelineMax()
+                .from(".lletres-item", 1.5, {scale: 0.4, opacity: 0})
+                .to(".lletres-item", 1.5, {scale: 1, opacity: 1, delay: 7});
+
+        new ScrollMagic.Scene({ triggerElement: "#lletres", duration: window.innerHeight, triggerHook: 1, offset: 400})
+            .setTween(tweenLletresItem)
+            .addTo(controller)
+
+        /* Scroll Magic - scene Tròpic del Mediterrani */
+
+        var tweenNouCDTitle = TweenMax.to("#nouCD .section-title", 1, { opacity: '1' });
+        var tweenNouCDLeft = TweenMax.to("#nouCD .nouCD-img", 1, { left: '0' });
+        var tweenNouCDRight = TweenMax.to("#nouCD .nouCD-content", 1, { left: '0' });
+
+        new ScrollMagic.Scene({ triggerElement: "#nouCD", duration: window.innerHeight, triggerHook: 1, offset: 100})
+            .setTween(tweenNouCDTitle)
+            .addTo(controller)
+
+        new ScrollMagic.Scene({ triggerElement: "#nouCD", duration: window.innerHeight, triggerHook: 1, offset: -300})
+            .setTween(tweenNouCDLeft)
+            .addTo(controller)
+
+        new ScrollMagic.Scene({ triggerElement: "#nouCD", duration: window.innerHeight, triggerHook: 0, offset: -300})
+            .setClassToggle("#nouCD .nouCD-img > img", "img-complet")
+            .addTo(controller)
+
+        new ScrollMagic.Scene({ triggerElement: "#nouCD", duration: window.innerHeight, triggerHook: 1, offset: -300})
+            .setTween(tweenNouCDRight)
+            .addTo(controller)
+
+        /* Scroll Magic - scene Marenga */
+
+        var tweenNouCDTitle = TweenMax.to("#marenga .section-title", 1, { opacity: '1' });
+        var tweenNouCDLeft = TweenMax.to("#marenga .marenga-img", 1, { left: '0' });
+        var tweenNouCDRight = TweenMax.to("#marenga .marenga-content", 1, { left: '0' });
+
+        new ScrollMagic.Scene({ triggerElement: "#marenga", duration: window.innerHeight, triggerHook: 1, offset: 100})
+            .setTween(tweenNouCDTitle)
+            .addTo(controller)
+
+        new ScrollMagic.Scene({ triggerElement: "#marenga", duration: window.innerHeight, triggerHook: 1, offset: -300})
+            .setTween(tweenNouCDLeft)
+            .addTo(controller)
+
+        new ScrollMagic.Scene({ triggerElement: "#marenga", duration: window.innerHeight, triggerHook: 0, offset: -300})
+            .setClassToggle("#marenga .marenga-img > img", "img-complet")
+            .addTo(controller)
+
+        new ScrollMagic.Scene({ triggerElement: "#marenga", duration: window.innerHeight, triggerHook: 1, offset: -300})
+            .setTween(tweenNouCDRight)
+            .addTo(controller)
+
+        /* Scroll Magic - scene Membres */
+
+        var tweenMembers = TweenMax.staggerFromTo(".animate1", 2, {left: window.innerWidth}, {left: 0, ease: Back.easeOut}, 0.15);
+
+        new ScrollMagic.Scene({triggerElement: "#team", duration: window.innerHeight/2, triggerHook: 1, offset: 400})
+            .setTween(tweenMembers)
+            .addTo(controller);
+
+        var tweenMembers2 = TweenMax.staggerFromTo(".animate2", 2, {left: window.innerWidth}, {left: 0, ease: Back.easeOut}, 0.15);
+
+        new ScrollMagic.Scene({triggerElement: "#team", duration: window.innerHeight/2, triggerHook: 1, offset: 600})
+            .setTween(tweenMembers2)
+            .addTo(controller);
+
+        /*FI Scroll Magic*/
+    } else {
+        /* Scroll Magic - scene Portada */
+
+        /* var tweenPortadaLogo = TweenMax.to(".hero-logo img", 1, { opacity: '0' });
+        var tweenPortadaText = TweenMax.to(".rotating", 1, { opacity: '0' });
+
+        new ScrollMagic.Scene({ triggerElement: "#hero", duration: window.innerHeight/8, triggerHook: 0, offset: 0})
+            .setTween(tweenPortadaLogo)
+            .addTo(controller)
+
+        new ScrollMagic.Scene({ triggerElement: "#hero", duration: window.innerHeight/8, triggerHook: 0, offset: 0})
+            .setTween(tweenPortadaText)
+            .addTo(controller) */
+
+        /* Scroll Magic - scene New Single */
+
+       /*  var tweenNewSingleTitle = TweenMax.to("#newSingle .section-title", 1, { opacity: '1' });
+        var tweenNouCDVideo = new TimelineMax()
+                .from("#newSingle .nouCD-content", 1.5, {scale: 0.4, opacity: 0})
+                .to("#newSingle .nouCD-content", 1.5, {scale: 1, opacity: 1, delay: 7});
+
+        new ScrollMagic.Scene({ triggerElement: "#newSingle", duration: window.innerHeight, triggerHook: 1, offset: 100})
+            .setTween(tweenNewSingleTitle)
+            .addTo(controller)
+
+        new ScrollMagic.Scene({ triggerElement: "#newSingle", duration: window.innerHeight, triggerHook: 1, offset: 500})
+            .setTween(tweenNouCDVideo)
+            .addTo(controller) */
+
+        /* Scroll Magic - scene Qui som */
+
+        /* var tweenAboutText = TweenMax.to(".about-content", 1, { opacity: '1' });
+
+        new ScrollMagic.Scene({ triggerElement: "#about", duration: window.innerHeight/2, triggerHook: 1, offset: 300})
+            .setTween(tweenAboutText)
+            .addTo(controller)
+
+        new ScrollMagic.Scene({ triggerElement: "#about", duration: window.innerHeight, triggerHook: 1, offset:  -800})
+            .setClassToggle(".about-img", "zap")
+            .addTo(controller) */
+    }
+
+   
+
+function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+};
     
-
-    new ScrollMagic.Scene({ triggerElement: ".hero-logo", duration: window.innerHeight/4, triggerHook: 0, offset: -200})
-        .setTween(tweenPortadaLogo)
-        .addTo(controller)
-
-    new ScrollMagic.Scene({ triggerElement: ".hero-logo", duration: window.innerHeight/4, triggerHook: 0, offset: -200})
-        .setTween(tweenPortadaText)
-        .addTo(controller)
- */
-    /* Scroll Magic - scene New Single */
-
-    var tweenNewSingleTitle = TweenMax.to("#newSingle .section-title", 1, { opacity: '1' });
-    var tweenNouCDLeft = TweenMax.to("#newSingle .nouCD-img", 1, { left: '0' });
-    var tweenNouCDRight = TweenMax.to("#newSingle .nouCD-content", 1, { left: '0' });
-
-    new ScrollMagic.Scene({ triggerElement: "#newSingle", duration: window.innerHeight, triggerHook: 1, offset: 100})
-        .setTween(tweenNewSingleTitle)
-        .addTo(controller)
-
-    new ScrollMagic.Scene({ triggerElement: "#newSingle", duration: window.innerHeight, triggerHook: 1, offset: -300})
-        .setTween(tweenNouCDLeft)
-        .addTo(controller)
-
-    new ScrollMagic.Scene({ triggerElement: "#newSingle", duration: window.innerHeight, triggerHook: 0, offset: -300})
-        .setClassToggle("#newSingle .nouCD-img > img", "img-complet")
-        .addTo(controller)
-
-    new ScrollMagic.Scene({ triggerElement: "#newSingle", duration: window.innerHeight, triggerHook: 1, offset: -300})
-        .setTween(tweenNouCDRight)
-        .addTo(controller)
-
-    /* Scroll Magic - scene Tròpic del Mediterrani */
-
-    var tweenNouCDTitle = TweenMax.to("#nouCD .section-title", 1, { opacity: '1' });
-    var tweenNouCDLeft = TweenMax.to("#nouCD .nouCD-img", 1, { left: '0' });
-    var tweenNouCDRight = TweenMax.to("#nouCD .nouCD-content", 1, { left: '0' });
-
-    new ScrollMagic.Scene({ triggerElement: "#nouCD", duration: window.innerHeight, triggerHook: 1, offset: 100})
-        .setTween(tweenNouCDTitle)
-        .addTo(controller)
-
-    new ScrollMagic.Scene({ triggerElement: "#nouCD", duration: window.innerHeight, triggerHook: 1, offset: -300})
-        .setTween(tweenNouCDLeft)
-        .addTo(controller)
-
-    new ScrollMagic.Scene({ triggerElement: "#nouCD", duration: window.innerHeight, triggerHook: 0, offset: -300})
-        .setClassToggle("#nouCD .nouCD-img > img", "img-complet")
-        .addTo(controller)
-
-    new ScrollMagic.Scene({ triggerElement: "#nouCD", duration: window.innerHeight, triggerHook: 1, offset: -300})
-        .setTween(tweenNouCDRight)
-        .addTo(controller)
-
-    /*FI Scroll Magic*/
 
 
 
