@@ -788,18 +788,18 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /* Services Section
 --------------------------------*/
-#services {
+#controversia {
   background: #fff
   background-size: cover;
   padding: 20px 20px 60px;
   text-align: justify;
 }
 
-#services .service-item {
+#controversia .service-item {
   margin-bottom: 20px;
 }
 
-#services .service-icon {
+#controversia .service-icon {
   float: left;
   background: #03C4EB;
   padding: 16px;
@@ -808,31 +808,31 @@ body.mobile-nav-active #mobile-nav-toggle {
   border: 1px solid #03C4EB;
 }
 
-#services .service-icon i {
+#controversia .service-icon i {
   color: #fff;
   font-size: 24px;
 }
 
-#services .service-item:hover .service-icon {
+#controversia .service-item:hover .service-icon {
   background: #fff;
 }
 
-#services .service-item:hover .service-icon i {
+#controversia .service-item:hover .service-icon i {
   color: #03C4EB;
 }
 
-#services .service-title {
+#controversia .service-title {
   margin-left: 80px;
   font-weight: 700;
   margin-bottom: 15px;
   text-transform: uppercase;
 }
 
-#services .service-title a {
+#controversia .service-title a {
   color: #fff;
 }
 
-#services .service-description {
+#controversia .service-description {
   margin-left: 80px;
   line-height: 24px;
 }
