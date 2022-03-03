@@ -823,16 +823,72 @@ body.mobile-nav-active #mobile-nav-toggle {
 	color: #ddd;
 	font-weight: 700;
 	font-size: 28px;
+	text-align: center;
 }
 
 #about .about-text {
 	line-height: 26px;
 	margin-bottom: 15px;
+	text-align: justify;
 }
 
 #about .about-text:last-child {
 	margin-bottom: 0;
 }
+
+/* Controversia Section
+--------------------------------*/
+
+#controversia {
+	margin: 20px 20px 0;
+}
+
+#controversia p {
+	text-align: justify;
+}
+
+#controversia .service-item {
+	margin-bottom: 20px;
+}
+  
+#controversia .service-icon {
+	float: left;
+	background: #03C4EB;
+	padding: 16px;
+	border-radius: 50%;
+	transition: 0.5s;
+	border: 1px solid #03C4EB;
+}
+  
+  #controversia .service-icon i {
+	color: #fff;
+	font-size: 24px;
+  }
+  
+  #controversia .service-item:hover .service-icon {
+	background: #fff;
+  }
+  
+  #controversia .service-item:hover .service-icon i {
+	color: #03C4EB;
+  }
+  
+  #controversia .service-title {
+	margin-left: 80px;
+	font-weight: 700;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+  }
+  
+  #controversia .service-title a {
+	color: #fff;
+  }
+  
+  #controversia .service-description {
+	margin-left: 80px;
+	line-height: 24px;
+  }
+
 
 /* Services Section
 --------------------------------*/
