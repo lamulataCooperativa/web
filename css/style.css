@@ -609,6 +609,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #nouCD {
 	background: #fff;
 	padding: 20px 0;
+	overflow: hidden;
 }
 
 #nouCD .nouCD-img {
@@ -690,6 +691,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #marenga {
 	background: #fff;
 	padding: 20px 0;
+	overflow: hidden;
 }
 
 #marenga .marenga-img {
@@ -771,6 +773,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/lamulata_about-bg.jpg) fixed center center;
 	padding: 20px 0;
 	color: #ddd;
+	overflow: hidden;
 }
 
 #about .about-img {
@@ -1195,6 +1198,31 @@ body.mobile-nav-active #mobile-nav-toggle {
 	padding: 80px 0;
 }
 
+#maixat .disabled {
+	opacity: 0.5;
+}
+
+#maixat .active {
+	opacity: 0.8;
+}
+
+
+#maixat .video-centered {
+	text-align: center;
+}
+
+#maixat iframe {
+	max-width: 100%;
+	margin-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+	#maixat iframe {
+		min-height: 300px;
+		height: auto;
+	}
+}
+
 #maixat .portfolio-item {
 	background-position: center center;
 	background-size: cover;
@@ -1207,6 +1235,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 	margin-bottom: 30px;
 	opacity: 0;
 	left: -100vw;
+	cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
@@ -1251,6 +1280,18 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #maixat .portfolio-item:hover .details span {
+	transform: translate3d(0, 0, 0);
+}
+
+#maixat .active .details {
+	opacity: 0.8;
+}
+
+#maixat .active .details h4 {
+	transform: translate3d(0, 0, 0);
+}
+
+#maixat .active .details span {
 	transform: translate3d(0, 0, 0);
 }
 
