@@ -134,21 +134,27 @@ jQuery(document).ready(function( $ ) {
     };
     
     $(".portfolio-item").on("click", function() {
-        $("#maixat .active").removeClass("active");
-        $(this).addClass("active");
-
         if ($(".video-centered").find("iframe")[0].src != $(this).data("src") 
             && !$(this).parent().hasClass("disabled")) {
-            $(".video-centered iframe").remove();
+            
+            $("#maixat .active").removeClass("active");
+            $(this).addClass("active");
+            var selectedVideo = $(this).data("src");
+            $("#maixat").css("height", $("#maixat").outerHeight())
+            $(".video-centered iframe").fadeOut(700);
             $('<iframe width="1020" height="630" frameborder="0" allowfullscreen></iframe>')
-                .attr("src", $(this).data("src"))
-                .appendTo("#maixat .video-centered");
+                    .attr("src", selectedVideo)
+                    .appendTo("#maixat .video-centered")
+                    .hide();
+            window.setTimeout( function() {
+                $(".video-centered iframe").first().remove();
+                $(".video-centered iframe").fadeIn(1400);
+            }, 800 ); // 0.5 seconds
 
             if (isMobileDevice() || window.innerWidth <= 767) {
                 $('html, body').animate({
                     scrollTop: $(".video-centered").offset().top - 100
-                  });
-
+                });
             }
         }
     });
