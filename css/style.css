@@ -1273,6 +1273,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 	margin-top: 50px;
 }
 
+#maixat .hidden {
+	-moz-opacity: 0;
+    opacity: 0;
+    -moz-transform: scale(0.01);
+    -webkit-transform: scale(0.01);
+    -o-transform: scale(0.01);
+    -ms-transform: scale(0.01);
+    transform: scale(0.01);
+}
+
 @media screen and (max-width: 768px) {
 	#maixat iframe {
 		min-height: 300px;
