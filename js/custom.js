@@ -8,11 +8,11 @@ jQuery(document).ready(function( $ ) {
         var tweenPortadaLogo = TweenMax.to(".hero-logo img", 1, { opacity: '0' });
         var tweenPortadaText = TweenMax.to(".rotating", 1, { opacity: '0' });
 
-        new ScrollMagic.Scene({ triggerElement: ".hero-logo", duration: window.innerHeight/4, triggerHook: 0, offset: -200})
+        new ScrollMagic.Scene({ triggerElement: ".hero-logo", duration: window.innerHeight/4, triggerHook: 0, offset: 0})
             .setTween(tweenPortadaLogo)
             .addTo(controller)
 
-        new ScrollMagic.Scene({ triggerElement: ".hero-logo", duration: window.innerHeight/4, triggerHook: 0, offset: -200})
+        new ScrollMagic.Scene({ triggerElement: ".hero-logo", duration: window.innerHeight/4, triggerHook: 0, offset: 0})
             .setTween(tweenPortadaText)
             .addTo(controller)
 
